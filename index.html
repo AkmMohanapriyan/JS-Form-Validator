@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Validator</title>
 
     <!-- Style Sheet Link -->
      <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
     
     <div class="container">
         <h2>User Registration</h2>
-        <form id="registrationForm">
+        <form id="registerForm">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -30,7 +30,8 @@
                 <label for="password">Password</label>
                 <div class="password-container">
                     <input type="password" id="password" name="password" required>
-                    <span class="toggle-password" onclick="togglePassword()">Show</span>
+                    <span id="toggle-password"><input type="button" value="Show" id="SHBtn" onclick="ShowHidePW()">
+</span>
                 </div>
                 <div class="strength-meter" id="strengthMeter"></div>
                 <div id="strengthText"></div>
@@ -41,7 +42,8 @@
                 <label for="confirmPassword">Confirm Password</label>
                 <div class="password-container">
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
-                    <span class="toggle-password" onclick="togglePassword()">Show</span>
+                    <span id="toggle-password"><input type="button" value="Show" id="SHBtn1" onclick="ShowHideCPW()">
+
                 </div>
                 <div class="error" id="confirmError">Passwords do not match</div>
             </div>
@@ -53,7 +55,7 @@
 
 
 
-    <script src="app.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
